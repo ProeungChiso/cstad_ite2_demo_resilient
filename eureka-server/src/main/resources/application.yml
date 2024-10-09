@@ -1,0 +1,28 @@
+#spring application
+spring:
+  application:
+    name: eureka-server
+
+#config port
+server:
+  port: 8761
+
+#config eureka-server
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    response-cache-update-interval-ms: 5000
+  dashboard:
+    path: /eureka-webui
+
+#spring boot actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
